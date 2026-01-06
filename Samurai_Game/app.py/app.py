@@ -5,15 +5,15 @@ pygame.init()
 s_width = 600
 s_height = 400
 x= 50
-y = 345
+y = 300
 vel = 5
 left = False
 right = False
 walkCount = 0
 
 screen = pygame.display.set_mode((s_width, s_height))
-clock = pygame.time.Clock
-walkRight = [pygame.image.load(f"Idle ({i}).png") for i in range(1,15)]
+clock = pygame.time.Clock()
+walkRight = [pygame.image.load(f"Run ({i}).png") for i in range(1,15)]
 
 
 
@@ -25,8 +25,12 @@ boy = pygame.transform.scale(boy,(100,100))
 
 def Gameloop():
     global walkCount
+    if walkCount +1 >= 15:
+        walkCount = 0
     
-    
+    if right == True:
+        screen.blit(walkRight[walkCount],(x,y))
+        walkCount = walkCount +1 
 
 
 
@@ -46,11 +50,17 @@ while done:
         right = False
     if keys[pygame.K_RIGHT]:
         x = x + vel
+        left = False 
+        right = True
+    else: 
+        right = False
+        left = False
+        walkCount = 0 
     
     
     
 
-
+    Gameloop()
 
     pygame.display.flip()
 
