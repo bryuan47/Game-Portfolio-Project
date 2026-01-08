@@ -15,15 +15,15 @@ neg = 1
 
 screen = pygame.display.set_mode((s_width, s_height))
 clock = pygame.time.Clock()
-walkRight = [pygame.transform.scale(pygame.image.load(f"Game-Portfolio-Project\Run ({i}).png").convert_alpha(),(100,100)) for i in range(1,9)]
-walkLeft = [pygame.transform.flip(pygame.transform.scale(pygame.image.load(f"Game-Portfolio-Project\Run ({i}).png").convert_alpha(),(100,100)), True, False) for i in range(1,9)]
+walkRight = [pygame.transform.scale(pygame.image.load(f"/Users/bryuan/Game-Portfolio-Project/Run ({i}).png").convert_alpha(),(100,100)) for i in range(1,9)]
+walkLeft = [pygame.transform.flip(pygame.transform.scale(pygame.image.load(f"/Users/bryuan/Game-Portfolio-Project/Run ({i}).png").convert_alpha(),(100,100)), True, False) for i in range(1,9)]
 
 
 
 pygame.display.set_caption("Samurai Showdown")
 bg = pygame.image.load("orig.png")
 bg = pygame.transform.scale(bg,(s_width, s_height))
-boy = pygame.image.load("Game-Portfolio-Project\Idle (1).png").convert_alpha()
+boy = pygame.image.load("/Users/bryuan/Game-Portfolio-Project/Idle (1).png").convert_alpha()
 boy = pygame.transform.scale(boy,(100,100))
 
 def Gameloop():
