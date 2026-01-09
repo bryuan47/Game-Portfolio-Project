@@ -30,7 +30,7 @@ pygame.display.set_caption("Jumping Kid")
 bg = pygame.image.load("Game_portfolio\orig.png")
 bg = pygame.transform.scale(bg,(s_width, s_height))
 
-idle_img = pygame.transform.scale(pygame.image.load("Game_portfolio\Game-Portfolio-Project\Idle (1).png").convert_alpha(),(100,100))
+idle_img = pygame.transform.scale(pygame.image.load(f"Game_portfolio\Game-Portfolio-Project\Idle (1).png").convert_alpha(),(100,100))
 
 #player class 
 class Player:
